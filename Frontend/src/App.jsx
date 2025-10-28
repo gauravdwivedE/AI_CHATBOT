@@ -126,7 +126,7 @@ function App() {
               <div className="avatar" aria-hidden>
                 {m.role === "user" ? "U" : "A"}
               </div>
-              <div className="bubble">
+              <div className="bubble" style={{overflowX: "auto"}}>
                 {/* ✅ Markdown now readable */}
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
@@ -139,8 +139,8 @@ function App() {
                             color: "#e0e0e0",
                             padding: "10px",
                             borderRadius: "6px",
-                            overflowX: "auto",
                             fontSize: "0.9rem",
+                      
                           }}
                         >
                           <code {...props}>{children}</code>
